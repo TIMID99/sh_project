@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* 왼쪽 계정 목록 스타일 */
+.account-list {
+  width: 30%;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-list h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.account-item {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #34495e;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.account-item:hover {
+  background-color: #1abc9c;
+}
+
+.account-item.active {
+  background-color: #16a085;
+}
+
+/* 오른쪽 계정 세부 정보 스타일 */
+.account-details {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 상단 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+  color: #2c3e50;
+  position: relative;
+}
+
+.account-details h2 {
+  margin-bottom: 20px; /* 제목 아래 간격 */
+  font-size: 1.5em;
+}
+
+.account-details p {
+  margin: 5px 0; /* 세부 정보 간격 */
+  font-size: 1.2em;
+}
+
+/* 우측 상단 계정 추가 버튼 */
+.add-account {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.add-account button {
+  padding: 10px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+.add-account button:hover {
+  background-color: #16a085;
+}
+
+/* 우측 하단 버튼 스타일 */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute; /* 버튼 위치 고정 */
+  bottom: 20px;
+  right: 20px;
+}
+
+.action-buttons button {
+  padding: 10px;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+.action-buttons button:hover {
+  background-color: #16a085;
+}
