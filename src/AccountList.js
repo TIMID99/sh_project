@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './AccountList.css';
 
 function AccountList() {
-  // 샘플 계정 데이터
+  // 더미 데이터 -> 나중에 지워줄 것
   const [accounts, setAccounts] = useState([
-    { id: 1, name: 'User A', role: 'Admin' },
-    { id: 2, name: 'User B', role: 'Editor' },
-    { id: 3, name: 'User C', role: 'Viewer' },
+    { id: 1, name: '유세진', role: '수석' },
+    { id: 2, name: '정한규', role: '선임' },
+    { id: 3, name: '유성우', role: '선임' },
   ]);
 
   // 현재 선택된 계정 상태 관리
@@ -14,10 +14,10 @@ function AccountList() {
 
   // 계정 추가 핸들러
   const handleAddAccount = () => {
-    const newName = prompt('새 계정 이름을 입력하세요:');
+    const newName = prompt('계정 이름을 입력하세요:');
     if (!newName) return;
 
-    const newRole = prompt('새 권한을 입력하세요 (Admin, Editor, Viewer):');
+    const newRole = prompt('권한을 입력하세요:');
     if (!newRole) return;
 
     const newAccount = {
@@ -36,11 +36,11 @@ function AccountList() {
       return;
     }
 
-    const newName = prompt('새 계정 이름을 입력하세요:', selectedAccount.name);
+    const newName = prompt('계정 이름을 입력하세요:', selectedAccount.name);
     if (!newName) return;
 
     const newRole = prompt(
-      '새 권한을 입력하세요 (Admin, Editor, Viewer):',
+      '권한을 입력하세요:',
       selectedAccount.role
     );
     if (!newRole) return;
